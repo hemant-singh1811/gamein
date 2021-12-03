@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Game In</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="shortcut icon" href="images/favi.ico">
+  <!--using FontAwesome-------->
+  <script src="https://kit.fontawesome.com/44f9cd6dc1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!--navigation---------->
+  <nav>
+    <!--logo---------->
+    <svg width="45" height="45" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <title>Game In</title>
+      <defs>
+        <linearGradient x1="0%" y1="0%" y2="100%" id="logo-a">
+          <stop stop-color="#4353FF" offset="0%" />
+          <stop stop-color="#4353FF" stop-opacity=".32" offset="100%" />
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" y2="100%" id="logo-b">
+          <stop stop-color="#4353FF" offset="0%" />
+          <stop stop-color="#4353FF" stop-opacity=".32" offset="100%" />
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" y2="100%" id="logo-c">
+          <stop stop-color="#78F9FF" stop-opacity=".24" offset="0%" />
+          <stop stop-color="#43F1FF" offset="55.496%" />
+          <stop stop-color="#43F1FF" stop-opacity=".24" offset="100%" />
+        </linearGradient>
+      </defs>
+      <g fill="none" fill-rule="evenodd">
+        <path d="M4 0h12v16H0V4a4 4 0 0 1 4-4z" fill="url(#logo-a)" />
+        <path d="M16 16h16v12a4 4 0 0 1-4 4H16V16z" fill="url(#logo-b)" />
+        <path d="M11.5 20.5H.5v1h10v10h1v-11z" stroke="url(#logo-c)" transform="matrix(-1 0 0 1 12 0)" />
+        <path d="M31.5.5h-11v1h10v10h1V.5z" stroke="url(#logo-c)" transform="matrix(1 0 0 -1 0 12)" />
+      </g>
+    </svg>
+
+    <!--menu---------->
+    <ul class="menu">
+      <li><a href="#">Tournaments</a></li>
+      <li><a href="#">Blogs</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <!--search---------->
+    <div class="search">
+      <input type="text" id="search_inpt" placeholder="Find Your Favourite Tournaments" />
+      <!--search-icon---------->
+      <i class="fas fa-search"></i>
+    </div>
+    <span id="ajax_response">
+      <div id="ul">
+        <!-- <li class="selected"><a class="search-tour" 
+                  href="/live_market/dynaContent/live_watch/get_quote/GetQuote.jsp?symbol=SPMLINFRA&amp;illiquid=0&amp;smeFlag=0&amp;itpFlag=0">thunder 
+                   <b>ra</b>  <span class="symbol"> <b>RA</b></span></a></li>
+          <li><a class="search-tour"  
+                  href="/live_market/dynaContent/live_watch/get_quote/GetQuote.jsp?symbol=RAMCOSYS&amp;illiquid=0&amp;smeFlag=0&amp;itpFlag=0"><b>Ra</b>pro game
+                     <span class="symbol"><b>RA</b> </span></a></li> -->
+      </div>
+    </span>
+  </nav>
+
+  <div id="center">
+    <!--image slider start-->
+    <div class="slider">
+      <div class="slides">
+        <!--radio buttons start-->
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!--radio buttons end-->
+        <!--slide images start-->
+        <div class="slide first">
+          <img src="./img/1.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/2.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/3.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/4.jpg" alt="">
+        </div>
+        <!--slide images end-->
+        <!--automatic navigation start-->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+        <!--automatic navigation end-->
+      </div>
+      <!--manual navigation start-->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+      <!--manual navigation end-->
+    </div>
+    <!--image slider end-->
+
+
+    <div id="blog">
+
+      <!--blog-container---->
+      <div class="blog-container">
+        <!--box-1---------------->
+        <div class="blog-box">
+          <!--text------------->
+          <div class="blog-text">
+            <h2 class="h4-style">Tournaments</h2>
+          </div>
+          <div id="tournament">
+
+          </div>
+          <div>
+            <a href="/all/tournament/" class="tournament_more_info" target="_blank">more</a>
+          </div>
+        </div>
+
+        <!--box-2---------------->
+        <div class="blog-box">
+          <!--text------------->
+          <div class="blog-text">
+            <h3 class="h4-style">Leagues</h3>
+          </div>
+        </div>
+
+      </div>
+
+
+      <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+      <script defer type="text/javascript" src="/script.js"></script>
+</body>
+
+</html>
